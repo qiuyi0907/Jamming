@@ -12,6 +12,11 @@ export default class App extends React.Component {
         { name: "Beautiful Life", artist: "Annie", album: "Life", id: 1 },
         { name: "Beautiful Day", artist: "Eric", album: "Life", id: 2 },
       ],
+      playlistName: "KPOP",
+      playlistTracks: [
+        { name: "NXUD", artist: "(G)-IDLE", album: "I LOVE", id: 3},
+        { name: "Attention", artist: "New Jeans", album: "Attention", id: 4}
+      ]
     };
   }
 
@@ -28,7 +33,7 @@ export default class App extends React.Component {
             {/* <!-- Add a SearchResults component --> */}
             <SearchResults searchResults={this.state.searchResults} />
             {/* <!-- Add a Playlist component --> */}
-            <PlayList />
+            <PlayList playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks} />
           </div>
         </div>
       </div>
